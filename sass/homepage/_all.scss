@@ -1,0 +1,26 @@
+// homepage_all.scss
+body{
+    font-family:"微軟正黑體";
+    box-sizing: border-box;
+    img{
+        width:100%;
+    }
+
+    // 所有包起來div
+    .homepage_wrapper{
+
+        //首頁banner
+        .banner{
+            .visual_banner{
+                background-image: url("../images/homepage/visual_banner.jpg");
+                max-width: 1920px;
+                height: 1080px;
+                background-repeat: no-repeat;
+                background-size: 100%;
+                background-position: center top;
+            }
+        }
+    
+
+    }
+}
