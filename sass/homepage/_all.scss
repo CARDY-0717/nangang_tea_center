@@ -9,17 +9,52 @@ body{
     // 所有包起來div
     .homepage_wrapper{
 
-        //首頁banner
-        .banner{
+        //首頁banner       
             .visual_banner{
+                border: 1px solid red;
                 background-image: url("../images/homepage/visual_banner.jpg");
                 max-width: 1920px;
                 height: 1080px;
                 background-repeat: no-repeat;
                 background-size: 100%;
                 background-position: center top;
+                display: flex;
+
+                    .tea_title{
+                        border: 1px solid blue;
+                        margin: 0 auto;
+                        width: 1200px;
+                        display:flex;
+                        flex-direction:row-reverse;
+                            .title_font{
+                                border: 1px solid black;                                
+                                display:flex;
+                                flex-direction:column;
+                                padding-top:20%;
+                                    .title_image{
+                                        border:1px solid green;
+                                        max-width:563px;  
+                                    }
+                                    .title_button{
+                                        border: 1px solid yellow;
+                                        display:flex;
+                                        flex-direction:column;
+                                        padding-left: 24%;
+                                        margin-top:6%;
+
+                                        //大按鈕mixin
+                                        @include btnall('a.btn_wide', 65% , 30px, 10px , 15px );
+
+                                        a.btn_wide{
+                                            position: relative;
+                                        }
+                                    }
+                              
+                            }
+                            
+                    }
             }
-        }
+        
     
     // 所有包起來div結束
     }
