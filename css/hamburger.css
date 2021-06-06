@@ -37,6 +37,8 @@ body{
 .nav{
     display:flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
     /* border:1px solid blue; */
    }
  
@@ -177,8 +179,9 @@ body{
    }
    
    .header .menu-btn:checked ~ .menu {
-     max-height: 1200px;
-     /* max-height:100vh; */
+     min-height: 100vh;
+     /* max-height: 1200px; */
+     
    }
    
    .header .menu-btn:checked ~ .menu-icon .navicon {
