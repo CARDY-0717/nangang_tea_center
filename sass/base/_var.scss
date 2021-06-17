@@ -12,6 +12,8 @@
 //btn大中小
 @mixin btnall($name , $w , $f , $padding , $margin){
       #{$name}{
+          position: relative; //hover白光定位用
+          overflow: hidden; //隱藏hover白光閃爍
           width:$w;
           font-size: $f;
           font-weight: bold;
@@ -19,32 +21,33 @@
           outline: none;
           padding:$padding;
           background-color:#E3C24A;
-      //     background-image: linear-gradient(#E3C24A,#F2DA82);
           text-align: center;
           border-radius: 10px;
           margin-bottom: $margin;
           text-decoration: none;
-              &:hover{
-                  //background: linear-gradient(#F29702,#F2DA82);
 
-                  // @keyframes shine {
-                  //       0% {transform: translateX(-65%);}
-                  //       100% {transform: translateX(0%);}
-                  // }
-
-                    background-color: lighten(#E3C24A, 10);
-
-                  //   &::after{
-                  //         content: "";
-                  //         position: absolute;
-                  //         top:0px;
-                  //         width:10%;
-                  //         height: 50%;
-                  //         animation: shine 1.5s;
-                  //         background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.2));
-                  //         opacity: .2;
-                  //   }
-              }
+          //hover前的白光
+          &::before{
+            content: "";
+            position: absolute;
+            top:0;
+            left:-100%;
+            width:100%;
+            height:100%;
+            opacity: .8;
+            background:linear-gradient(90deg,transparent,#fff,transparent);
+            transition: 0.5s;
+           }
+                  
+           
+                  //hover後白光往右跑
+                  &:hover{
+                        &::before{
+                        content: "";
+                        left:100%;
+                        }
+                
+                  }
       }
 };
 

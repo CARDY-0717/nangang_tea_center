@@ -12,7 +12,7 @@ body .homepage_wrapper .visual_banner {
   border: 1px solid red;
   background-image: url("../images/homepage/visual_banner.jpg");
   max-width: 1920px;
-  height: 1080px;
+  height: 1060px;
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center top;
@@ -48,6 +48,8 @@ body .homepage_wrapper .visual_banner .tea_title .title_font .title_button {
 }
 
 body .homepage_wrapper .visual_banner .tea_title .title_font .title_button a.btn_wide {
+  position: relative;
+  overflow: hidden;
   width: 65%;
   font-size: 30px;
   font-weight: bold;
@@ -61,11 +63,66 @@ body .homepage_wrapper .visual_banner .tea_title .title_font .title_button a.btn
   text-decoration: none;
 }
 
-body .homepage_wrapper .visual_banner .tea_title .title_font .title_button a.btn_wide:hover {
-  background-color: #ead176;
+body .homepage_wrapper .visual_banner .tea_title .title_font .title_button a.btn_wide::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  opacity: .8;
+  background: linear-gradient(90deg, transparent, #fff, transparent);
+  transition: 0.5s;
 }
 
-body .homepage_wrapper .visual_banner .tea_title .title_font .title_button a.btn_wide {
-  position: relative;
+body .homepage_wrapper .visual_banner .tea_title .title_font .title_button a.btn_wide:hover::before {
+  content: "";
+  left: 100%;
+}
+
+body .homepage_wrapper .green_bk {
+  border: 1px solid brown;
+  background-color: #C5C887;
+  width: 100%;
+  margin: 0 auto;
+}
+
+body .homepage_wrapper .green_bk .white_bk {
+  border: 1px solid blue;
+  background-color: white;
+  margin: 50px 150px;
+}
+
+body .homepage_wrapper .green_bk .white_bk .hot_events {
+  max-width: 367px;
+  margin: 0 auto;
+  margin-top: 124px;
+  border: 1px solid red;
+}
+
+body .homepage_wrapper .green_bk .white_bk .package_big {
+  width: 1400px;
+  border: 1px solid yellow;
+  margin: 0 auto;
+}
+
+body .homepage_wrapper .green_bk .white_bk .package_big .register_title {
+  display: flex;
+  align-items: center;
+}
+
+body .homepage_wrapper .green_bk .white_bk .package_big .register_title h2 {
+  font-size: 30px;
+  margin: 40px 15px 40px 0px;
+  color: #56793B;
+  font-weight: bold;
+  display: inline-flex;
+}
+
+body .homepage_wrapper .green_bk .white_bk .package_big .register_title .title_line {
+  background-color: #EBEBEB;
+  border: 1.5px solid #EBEBEB;
+  height: 1.5%;
+  width: 70%;
 }
 /*# sourceMappingURL=style.css.map */
