@@ -6,6 +6,7 @@ body{
         width:100%;
     }
 
+
     // 所有包起來div
     .homepage_wrapper{
 
@@ -44,7 +45,7 @@ body{
                                         margin-top:6%;
 
                                         //大按鈕mixin
-                                        @include btnall('a.btn_wide', 65% , 30px, 10px , 15px );
+                                        @include btnall('a.btn_wide', 65% , 30px, 10px , #E3C24A ,15px );
 
                                     }
                               
@@ -67,6 +68,7 @@ body{
                     background-color: white;
                     margin: 50px 150px;
                     
+                        //活動區-第一區活動報名
                         //標題圖
                         .hot_events{
                             max-width: 367px;
@@ -76,43 +78,289 @@ body{
                         }
 
                        .package_big{
-                           width:1400px;
+                           max-width:1400px;
                            border: 1px solid yellow;
                            margin: 0 auto;
-
+                           
+                                //標題字
                                 .register_title{
                                     display: flex;
+                                    flex-direction: row;
                                     align-items: center; 
+                                    flex-wrap:wrap;
+                                    // justify-content: center;
+                                    align-content: center;
+                                    padding:80px 0px 20px 0px;
+                                    // border: 1px solid blue;
 
                                             h2{
                                                 // border:1px solid green;
                                                 font-size: map-get($font_size, 'h2');
-                                                margin:40px 15px 40px 0px;
+                                                margin-right: 20px;
                                                 color:#56793B;
                                                 font-weight: bold;
                                                 display: inline-flex;
+                                               
                                              
                                             }
                                                 
-
                                             .title_line{
-                                                background-color:#EBEBEB;
                                                 border:1.5px solid #EBEBEB;
-                                                height: 1.5%;
-                                                width:70%;
+                                                background-color:#EBEBEB ;
+                                                width:46%;
+                                                margin-right: 4%;
                                             }
+
+                                           //中按鈕mixin
+                                            @include btnall('a.btn_middle', 10% , 20px, 8px , #E3C24A, 0px );
                                         
                                 
                                 }
-                       } 
 
-                }
-            }
+                                .package_small{
+                                    max-width: 1300px;
+                                    // border: 1px solid blue;
+                                    margin: 0 auto;
+                                    display:inline-flex;
+                                    align-items: center; 
+                                    align-self: center;
+                                    flex-wrap:wrap;
+
+                                        //活動區-第一區活動報名
+                                        .events_card{
+                                            display:flex;
+                                            flex-direction: column;
+                                            background-color:#EBEBEB ;
+                                            box-shadow:-5px 5px 4px #C1BDBD;
+                                            padding:25px;
+                                            margin: 0px 30px 30px 0px;
+
+                                                a.card_each{
+                                                    outline: none;
+                                                    text-decoration: none;
+             
+                                                    .img_circle{
+                                                        position: relative; //定位用
+                                                        overflow: hidden;
+
+
+                                                            //hover前元素設定
+                                                            &::before{
+                                                                position: absolute;
+                                                                content: '';
+                                                                top: 50%;
+                                                                left: 50%;
+                                                                z-index: 99;
+                                                                display: block;
+                                                                height: 0;
+                                                                background: rgba(255,255,255,.2);
+                                                                border-radius: 100%;
+                                                                transform: translate(-50%, -50%);
+                                                                opacity: 0;
+                                                            }
+
+                                                             //hover動畫
+                                                             @keyframes circle {
+                                                                0% {
+                                                                opacity: 1;
+                                                                }
+                                                                40% {
+                                                                opacity: 1;
+                                                                }
+                                                                100% {
+                                                                width: 170%;
+                                                                height: 170%;
+                                                                opacity: 0;
+                                                                }
+                                                            }
+                                            
+                                                            &:hover{
+                                                                &::before{
+                                                                    animation: circle .90s;
+                                                                }
+                                                            }
+   
+                                                    }
+                                                    
+                                                        h4{
+                                                            font-size: map-get($font_size, 'h4'); 
+                                                            color:#818181;
+                                                            margin:8px 0px;
+                                                            font-weight: normal;
+
+                                                        }
+
+                                                        h3{
+                                                            font-size: map-get($font_size, 'h3'); 
+                                                            color:black;
+                                                            margin:0px 0px 18px 0px;
+                                                            font-weight: normal;
+
+                                                        }
+                                                }
+                                                    
+                                                //小按鈕mixin
+                                                @include btnall('a.btn_small', 33% , 12px, 7px , #E3C24A , 0px );
+             
+                                        }
+
+                                        //活動區-第二區活動預告
+                                        .events_upcome{
+                                            background-color:white ;
+
+                                            a.card_each{
+
+                                                //調整圖片hover效果
+                                                .img_grey{
+                                                    position: relative; //定位用
+                                                    overflow: hidden;
+                                                    -webkit-filter: grayscale(60%) blur(0.7px);//灰階跟模糊
+                                                    filter: grayscale(60%) blur(0.7px);
+                                                    -webkit-transition: .3s ease-in-out;
+                                                    transition: .3s ease-in-out;
+
+                                                     //hover前元素設定
+                                                     &::before{
+                                                        position: absolute;
+                                                        content: '';
+                                                        top: 50%;
+                                                        left: 50%;
+                                                        z-index: 99;
+                                                        display: block;
+                                                        height: 0;
+                                                        background: rgba(255,255,255,.2);
+                                                        border-radius: 100%;
+                                                        transform: translate(-50%, -50%);
+                                                        opacity: 0;
+                                                    }
+
+                                                     //hover動畫
+                                                     @keyframes circle {
+                                                        0% {
+                                                        opacity: 1;
+                                                        }
+                                                        40% {
+                                                        opacity: 1;
+                                                        }
+                                                        100% {
+                                                        width: 170%;
+                                                        height: 170%;
+                                                        opacity: 0;
+                                                        }
+                                                    }
+                                    
+                                                        &:hover{
+                                                            -webkit-filter: grayscale(0) blur(0px);
+                                                            filter: grayscale(0) blur(0px);
+                                                            &::before{
+                                                                animation: circle .90s;
+                                                            }
+                                                        }
+                                                    
+                                                }
+
+                                            }
+                                            
+                                        }
+
+                                }//package_small結尾
+
+
+                                //活動區-第三區活動公告
+                                .package_small_news{
+                                    max-width: 1300px;
+                                    // border: 1px solid grey;
+                                    display:flex;
+                                    flex-direction: column;
+                                    flex-wrap: wrap;
+                                    // align-content: center;
+                                    // justify-content: center;
+
+                                        //綠色線
+                                        .news_line_a{
+                                            border: 1.5px solid #56793B;
+                                            width:96%;
+                                            background-color:#56793B ;
+                                        }
+
+                     
+                                        a.news_hover{
+                                            outline: none;
+                                            text-decoration: none;
+                                            display: flex;
+                                            flex-direction: row;
+                                            flex-wrap: wrap;
+                                            position: relative; //hover白光定位
+                                            overflow: hidden; //隱藏hover白光
+
+                                            //hover前的白光
+                                            &::before{
+                                                content: "";
+                                                position: absolute;
+                                                top:0;
+                                                left:-100%;
+                                                width:100%;
+                                                height:100%;
+                                                opacity: .8;
+                                                background:linear-gradient(90deg,transparent,#fff,transparent);
+                                                transition: 0.5s;
+                                            }
+                                                    
+                                            
+                                            //hover後白光往右跑
+                                            &:hover{
+                                                    &::before{
+                                                    content: "";
+                                                    left:100%;
+                                                    }
+                                            
+                                            }
+
+                            
+                                                 h4{
+                                                    font-size: map-get($font_size, 'h4'); 
+                                                    color:#818181;
+                                                    font-weight: normal;
+                                                    margin-right: 15px;
+                                                    // border:1px solid pink;
+                                                        
+                                                }
+
+                                                h3{
+                                                    font-size: map-get($font_size, 'h3'); 
+                                                    color:black;
+                                                    margin:0px;
+                                                    font-weight: normal;
+                                                    align-self: center;
+                                                    // border: 1px solid yellow;
+
+                                                }
+
+                                        }
+                                        
+                                        .inner_line{
+                                            border: 1.5px solid #EBEBEB;
+                                            width:96%;
+                                            background-color:#EBEBEB ;
+
+                                        }
+
+                                }//package_small_newsr結尾
+                        
+                                    
+
+                       } //package_big結尾
+
+                }//white_bk結尾
+
+            }//green_bk結尾
     
 
 
 
 
-    // 所有包起來div結束
-    }
-}
+    
+    }// 所有包起來div結束
+
+
+}//body結束

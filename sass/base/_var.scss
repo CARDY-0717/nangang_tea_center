@@ -10,21 +10,24 @@
 
 
 //btn大中小
-@mixin btnall($name , $w , $f , $padding , $margin){
+@mixin btnall($name , $w , $f , $padding , $color , $margin){
       #{$name}{
-          position: relative; //hover白光定位用
-          overflow: hidden; //隱藏hover白光閃爍
+          position: relative; //hover白光定位
+          overflow: hidden; //隱藏hover白光
           width:$w;
           font-size: $f;
           font-weight: bold;
           color:white;
           outline: none;
           padding:$padding;
-          background-color:#E3C24A;
+          background-color: $color;
           text-align: center;
           border-radius: 10px;
           margin-bottom: $margin;
           text-decoration: none;
+          
+          
+          
 
           //hover前的白光
           &::before{
@@ -48,6 +51,7 @@
                         }
                 
                   }
+            
       }
 };
 
