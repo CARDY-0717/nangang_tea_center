@@ -66,6 +66,8 @@ body{
                 .white_bk{
                     border: 1px solid blue;
                     background-color: white;
+                    // width: calc(100% - 300px);
+                    // margin-top:50px;
                     margin: 50px 150px;
                     
                         //活動區-第一區活動報名
@@ -192,11 +194,29 @@ body{
 
                                                         h3{
                                                             font-size: map-get($font_size, 'h3'); 
-                                                            color:black;
+                                                            // color:black;
                                                             margin:0px 0px 18px 0px;
                                                             font-weight: normal;
+                                                            // border: 1px solid green;
+                                                            position: relative; //定位用
+                                                            overflow: hidden;
+                                                            // background:linear-gradient(90deg,transparent,black,transparent);
+                                                            // background:linear-gradient(90deg,transparent,#625E5E,#000000,transparent);
+                                                            // background: linear-gradient(to right, #A3A1A1, #A3A1A1 50%, #000000 50%);
+                                                            background: linear-gradient(to right, #56793B, #56793B 50%, #000000 50%);
+                                                            background-clip: text;
+                                                            -webkit-background-clip: text;
+                                                            -webkit-text-fill-color: transparent;
+                                                            background-size: 200% 100%;
+                                                            background-position: 100%;
+                                                            transition: background-position 275ms ease;
+
+                                                            &:hover {
+                                                                background-position: 0 100%;
+                                                            }
 
                                                         }
+                                               
                                                 }
                                                     
                                                 //小按鈕mixin
@@ -290,33 +310,7 @@ body{
                                             display: flex;
                                             flex-direction: row;
                                             flex-wrap: wrap;
-                                            position: relative; //hover白光定位
-                                            overflow: hidden; //隱藏hover白光
-
-                                            //hover前的白光
-                                            &::before{
-                                                content: "";
-                                                position: absolute;
-                                                top:0;
-                                                left:-100%;
-                                                width:100%;
-                                                height:100%;
-                                                opacity: .8;
-                                                background:linear-gradient(90deg,transparent,#fff,transparent);
-                                                transition: 0.5s;
-                                            }
-                                                    
-                                            
-                                            //hover後白光往右跑
-                                            &:hover{
-                                                    &::before{
-                                                    content: "";
-                                                    left:100%;
-                                                    }
-                                            
-                                            }
-
-                            
+             
                                                  h4{
                                                     font-size: map-get($font_size, 'h4'); 
                                                     color:#818181;
@@ -327,12 +321,25 @@ body{
                                                 }
 
                                                 h3{
+                                                    // border: 1px solid yellow;
                                                     font-size: map-get($font_size, 'h3'); 
                                                     color:black;
                                                     margin:0px;
                                                     font-weight: normal;
                                                     align-self: center;
-                                                    // border: 1px solid yellow;
+                                                    position: relative; //定位用
+                                                    overflow: hidden;
+                                                    background: linear-gradient(to right, #56793B, #56793B 50%, #000000 50%);
+                                                    background-clip: text;
+                                                    -webkit-background-clip: text;
+                                                    -webkit-text-fill-color: transparent;
+                                                    background-size: 200% 100%;
+                                                    background-position: 100%;
+                                                    transition: background-position 275ms ease;
+
+                                                    &:hover {
+                                                        background-position: 0 100%;
+                                                    }
 
                                                 }
 
@@ -346,16 +353,150 @@ body{
                                         }
 
                                 }//package_small_newsr結尾
-                        
-                                    
 
+                               
+                                // 活動區-第四區活動花絮
+                                .scenes_title{
+                                    .title_line{
+                                        width:42%;
+                                    }
+                                }
+
+                                .package_small_scenes{
+                                    max-width:1050px;
+                                    border: 3px solid #56793B;
+                                    margin: 0 auto;
+                                    padding:40px;
+                                    // cursor: pointer;
+                                    display: flex;
+                                    flex-direction:row;
+                                    flex-wrap: wrap;
+                                    margin-bottom: 150px;
+                                    box-shadow: -30px 30px #FDF0D2;
+                                    // border: 1px solid blue;
+
+                                        .scenes_left{
+                                            // border:1px solid blue;
+                                            max-width: 500px;
+                                            display: flex;
+                                            flex-direction: column;
+                                            margin-right: 40px;
+                                            
+
+                                                h3{
+                                                    // border: 1px solid pink;
+                                                    font-size: map-get($font_size, 'h3'); 
+                                                    color: black;
+                                                    font-weight: bold;
+
+
+                                                        &::first-letter{
+                                                            // background-color: #56793B;
+                                                            // margin-right: 1%;
+                                                            color: #56793B;
+                                                            // padding:0px;
+                                                            // border: 1px solid red;
+                                                        }
+
+
+                                                }
+
+                                                .scenes_inner_line{
+                                                    border: 1px solid #EBEBEB;
+                                                    width:85%;
+                                                    background-color:#EBEBEB ;
+                                                    margin-bottom: 15px;
+                                                }
+
+                                                h4{
+                                                    font-size: map-get($font_size, 'h4'); 
+                                                    color:black;
+                                                    font-weight: normal;
+                                                    margin:0px;
+
+                                                }
+
+                                                h5{
+                                                    font-size: map-get($font_size, 'h5'); 
+                                                    color:black;
+                                                    font-weight: normal;
+                                                    margin: 0px 0px 15px 0px;
+
+                                                }
+
+                                                a.scenes_video{
+                                                    outline: none;
+                                                    position: relative;
+                                                    font-size: map-get($font_size, 'h4'); 
+                                                    font-weight: normal;
+                                                    color: royalblue;
+                                                    overflow: hidden;
+                                                    background: linear-gradient(to right, midnightblue, midnightblue 50%, royalblue 50%);
+                                                    background-clip: text;
+                                                    -webkit-background-clip: text;
+                                                    -webkit-text-fill-color: transparent;
+                                                    background-size: 200% 100%;
+                                                    background-position: 100%;
+                                                    transition: background-position 275ms ease;
+                                                    text-decoration: none; 
+
+                                                    &:hover {
+                                                      background-position: 0 100%;
+                                                    }
+                                                }
+
+                                                .scenes_small_photos{
+                                                    display:flex;
+                                                    flex-direction:row;
+                                                    // border:1px solid brown;
+                                                    flex-wrap: wrap;
+                                                    // align-content: center;
+                                                    justify-content: space-around;
+                                                    margin-top: 20px;
+
+                                                        .small_size{
+                                                        // border:1px solid black;
+                                                        max-width: 89px;
+                                                        padding:0px;
+                                                        margin: 0px 10px 10px 0px;
+                                                        }
+                                                }
+
+
+                                        }//scenes_left結尾
+
+                                        //右邊大圖
+                                        .scenes_big_photos{
+                                            max-width:500px;
+                                            // border: 1px solid black;
+                                            align-self: center;
+                                            font-size: 0px;
+                                        }
+
+                                       
+
+
+
+
+
+                                }//package_small_scenes結尾
                        } //package_big結尾
-
                 }//white_bk結尾
-
             }//green_bk結尾
     
 
+            //第三區茶山茶事公告區
+            .package_big{
+
+                //標題圖
+                .news_title{
+                    max-width: 367px;
+                    margin: 0 auto;
+                    margin-top:124px;
+                    border:1px solid red;
+                }
+            }
+        
 
 
 
