@@ -1,5 +1,12 @@
-//變數
+//----------var----------
 @import'./base/var';
 
-// 首頁
-@import'./homepage/all';
+//----------mixin----------
+@import'./mixin/mixin';
+
+// ---------page----------
+
+// page_index
+@import'./page/index/all';
+
+//page_our_Services

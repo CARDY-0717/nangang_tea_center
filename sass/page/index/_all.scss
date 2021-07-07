@@ -8,7 +8,7 @@ body{
 
 
     // 所有包起來div
-    .homepage_wrapper{
+    .index_wrapper{
 
         // 第一區banner跟大按鈕
         //首頁banner       
@@ -371,7 +371,7 @@ body{
                                     display: flex;
                                     flex-direction:row;
                                     flex-wrap: wrap;
-                                    margin-bottom: 150px;
+                                    margin-bottom: 200px;
                                     box-shadow: -30px 30px #FDF0D2;
                                     // border: 1px solid blue;
 
@@ -472,13 +472,6 @@ body{
                                             align-self: center;
                                             font-size: 0px;
                                         }
-
-                                       
-
-
-
-
-
                                 }//package_small_scenes結尾
                        } //package_big結尾
                 }//white_bk結尾
@@ -487,21 +480,229 @@ body{
 
             //第三區茶山茶事公告區
             .package_big{
+                max-width:1400px;
+                border: 1px solid yellow;
+                margin: 0 auto;
+                // padding-bottom: 150px;
 
-                //標題圖
-                .news_title{
-                    max-width: 367px;
-                    margin: 0 auto;
-                    margin-top:124px;
-                    border:1px solid red;
-                }
+                    //標題圖
+                    .news_title{
+                        max-width: 367px;
+                        margin: 0 auto;
+                        margin-top:124px;
+                        border:1px solid red;
+                    }
+
+                    //標題字
+                    .news_title_word{
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center; 
+                        flex-wrap:wrap;
+                        // justify-content: center;
+                        align-content: center;
+                        padding:80px 0px 20px 0px;
+                        // border: 1px solid blue;
+
+                                h2{
+                                    // border:1px solid green;
+                                    font-size: map-get($font_size, 'h2');
+                                    margin-right: 20px;
+                                    color:#56793B;
+                                    font-weight: bold;
+                                    display: inline-flex;
+                                
+                                
+                                }
+                                    
+                                .title_line{
+                                    border:1.5px solid #EBEBEB;
+                                    background-color:#EBEBEB ;
+                                    width:51%;
+                                    margin-right: 4%;
+                                }
+
+                            //中按鈕mixin
+                                @include btnall('a.btn_middle', 10% , 20px, 8px , #E3C24A, 0px );
+
+                    }
+
+                    //公告標題
+                    .news_main{
+                        border:1px solid blue;
+                        max-width: 1200px;
+                        display: flex;
+                        flex-direction: column;
+                        // justify-content: center;
+                        flex-wrap: wrap;
+                        // align-content: center;
+                        margin: 0 auto;
+                        margin-bottom: 200px;
+
+
+                            a.news_topic{
+                                display: flex;
+                                flex-direction: row;
+                                flex-wrap: wrap;
+                                outline: none;
+                                text-decoration: none;
+                                background-color: #EDE3CC;
+                                padding:20px 0px 20px 20px;
+                                margin-bottom: 15px;
+
+                                    h4{
+                                        font-size: map-get($font_size, 'h4'); 
+                                        color:#818181;
+                                        font-weight: normal;
+                                        align-self: center;
+                                        margin: 0px 15px 0px 0px;
+                                    }
+
+                                    h3{
+                                        font-size: map-get($font_size, 'h3');
+                                        margin:0px; 
+                                        color:black;
+                                        font-weight: normal;
+                                        align-self: center;
+                                        position: relative; //定位用
+                                        overflow: hidden;
+                                        background: linear-gradient(to right, #56793B, #56793B 50%, #000000 50%);
+                                        background-clip: text;
+                                        -webkit-background-clip: text;
+                                        -webkit-text-fill-color: transparent;
+                                        background-size: 200% 100%;
+                                        background-position: 100%;
+                                        transition: background-position 275ms ease;
+
+                                        &:hover {
+                                            background-position: 0 100%;
+                                        }
+                                    }
+                            }
+                    }              
+            }//package_big結尾
+
+            //第四區用心茶覺聯繫區
+            //綠色標題底
+            .contact_green{
+                max-width: 100%;
+                background-color: #F4F7EC;
+                display: flex;
+                padding:50px 0px;
+                margin-bottom: 80px;
+
+                    .contact_title{
+                        // border:1px solid blue;
+                        max-width: 1400px;
+                        margin: 0 auto;
+                    }
             }
+
+            //1200線
+            .package_small{
+                // border:1px solid blue;
+                margin: 0 auto;
+                max-width: 1200px;
+                display: flex;
+                flex-direction: row;
+                justify-content:space-around;
+                flex-wrap: wrap;
+
+                    //地址區1
+                    .contact_address{
+                        // border: 1px solid black;
+                        display: flex;
+                        flex-direction: column;
+                        margin-right: 100px;  
+
+                            .address_circle{
+                                width:110px;
+                                height: 110px;
+                                border-radius:50%;
+                                background-color: white;
+                                box-shadow: -5px 5px 4px #C1BDBD ;
+                                // vertical-align: middle;
+                                background-image: url("../images/contact_us/location_icon.png");
+                                background-repeat: no-repeat;
+                                background-position: center center;
+                                margin-left:35px;
+                                // border: 1px solid green;
+                            }
+
+                            h3{
+                                font-size: map-get($font_size, 'h3'); 
+                                color: black;
+                                font-weight:normal;
+                                // border: 1px solid blue;
+                                display: flex;
+                                flex-direction: row;
+
+                                    span.contact_icon{
+                                        // border: 1px solid green;
+                                        display: inline-flex;
+                                        align-self: center;
+                                        margin-right: 10px;
+                                    }
+
+                            }
+
+                            h3.adress_getting_here{
+                                position: relative; //定位用
+                                overflow: hidden;
+                                background: linear-gradient(to right, #56793B, #56793B 50%, #000000 50%);
+                                background-clip: text;
+                                -webkit-background-clip: text;
+                                -webkit-text-fill-color: transparent;
+                                background-size: 200% 100%;
+                                background-position: 100%;
+                                transition: background-position 275ms ease;
+                                text-decoration-line: underline;
+
+                                &:hover {
+                                    background-position: 0 100%;
+                                }
+                            }
+
+
+                            //網站區2
+                            .web_circle{
+                                background-image: url("../images/contact_us/web_icon.png");
+                            }
+
+                            //留言區3
+                            .message_circle{
+                                background-image: url("../images/contact_us/message_icon.png");
+                                margin-left:45px;
+                            }
+
+                            h5{
+                                font-size: map-get($font_size, 'h5'); 
+                                color:black;
+                                font-weight: normal;
+                                display: flex;
+                                flex-direction: row;
+
+                                    span.message_icon{
+                                        // border: 1px solid green;
+                                        display: inline-flex;
+                                        align-self: center;
+                                        margin-right: 10px;
+                                    }
+                            }
+
+                            //小按鈕mixin
+                            @include btnall('a.btn_small', 33% , 12px, 7px , #E3C24A , 0px );
+  
+                    }
+            }
+
+
         
 
 
 
     
-    }// 所有包起來div結束
+    }// 所有包起來index_div結束
 
 
 }//body結束
