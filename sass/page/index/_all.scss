@@ -132,10 +132,14 @@ body{
                                         .events_card{
                                             display:flex;
                                             flex-direction: column;
+                                            // background-color:white ;
                                             background-color:#EBEBEB ;
-                                            box-shadow:-5px 5px 4px #C1BDBD;
+                                            // box-shadow:-5px 5px 4px #C1BDBD;
+                                            // box-shadow:0px 2px 8px rgb(0 0 0 / 90%);
+                                            box-shadow:0px 2px 8px  #C1BDBD;
                                             padding:25px;
                                             margin: 0px 30px 30px 0px;
+                                            cursor: pointer;
 
                                                 a.card_each{
                                                     outline: none;
@@ -144,7 +148,6 @@ body{
                                                     .img_circle{
                                                         position: relative; //定位用
                                                         overflow: hidden;
-
 
                                                             //hover前元素設定
                                                             &::before{
@@ -160,28 +163,6 @@ body{
                                                                 transform: translate(-50%, -50%);
                                                                 opacity: 0;
                                                             }
-
-                                                             //hover動畫
-                                                             @keyframes circle {
-                                                                0% {
-                                                                opacity: 1;
-                                                                }
-                                                                40% {
-                                                                opacity: 1;
-                                                                }
-                                                                100% {
-                                                                width: 170%;
-                                                                height: 170%;
-                                                                opacity: 0;
-                                                                }
-                                                            }
-                                            
-                                                            &:hover{
-                                                                &::before{
-                                                                    animation: circle .90s;
-                                                                }
-                                                            }
-   
                                                     }
                                                     
                                                         h4{
@@ -211,74 +192,100 @@ body{
                                                             background-position: 100%;
                                                             transition: background-position 275ms ease;
 
-                                                            &:hover {
-                                                                background-position: 0 100%;
-                                                            }
-
                                                         }
                                                
                                                 }
                                                     
                                                 //小按鈕mixin
                                                 @include btnall('a.btn_small', 33% , 12px, 7px , #E3C24A , 0px );
-             
+                                            
+                                            //卡牌hover後
+                                            &:hover{
+                                                box-shadow:0px 10px 20px  #CBC7C7;
+                                                transform: translateY(-1.5%);
+                                                transition: .3s ease-in-out;
+
+                                                    //圖片的hover
+                                                    .img_circle{
+                                                        //hover動畫
+                                                        @keyframes circle {
+                                                            0% {
+                                                            opacity: 1;
+                                                            }
+                                                            40% {
+                                                            opacity: 1;
+                                                            }
+                                                            100% {
+                                                            width: 170%;
+                                                            height: 170%;
+                                                            opacity: 0;
+                                                            }
+                                                        }
+                                                        &::before{
+                                                            animation: circle 1.5s;
+                                                        }
+                                                    }
+                                                    //文字變綠色hover
+                                                    h3.events_title{
+                                                        // -webkit-text-fill-color: #56793B;
+                                                        background-position: 0 100%;
+                                                        // background: linear-gradient(to right, #56793B, #56793B 50%, #000000 50%);
+                                                    }
+                                            }
                                         }
 
                                         //活動區-第二區活動預告
                                         .events_upcome{
                                             background-color:white ;
 
-                                            a.card_each{
+                                                a.card_each{
+                                                    //調整圖片hover效果
+                                                    .img_grey{
+                                                        position: relative; //定位用
+                                                        overflow: hidden;
+                                                        -webkit-filter: grayscale(80%) blur(1px);//灰階跟模糊
+                                                        filter: grayscale(80%) blur(1px);
+                                                        -webkit-transition: .3s ease-in-out;
+                                                        transition: .3s ease-in-out;
 
-                                                //調整圖片hover效果
-                                                .img_grey{
-                                                    position: relative; //定位用
-                                                    overflow: hidden;
-                                                    -webkit-filter: grayscale(60%) blur(0.7px);//灰階跟模糊
-                                                    filter: grayscale(60%) blur(0.7px);
-                                                    -webkit-transition: .3s ease-in-out;
-                                                    transition: .3s ease-in-out;
+                                                        //hover前元素設定
+                                                        &::before{
+                                                            position: absolute;
+                                                            content: '';
+                                                            top: 50%;
+                                                            left: 50%;
+                                                            z-index: 99;
+                                                            display: block;
+                                                            height: 0;
+                                                            background: rgba(255,255,255,.2);
+                                                            border-radius: 100%;
+                                                            transform: translate(-50%, -50%);
+                                                            opacity: 0;
+                                                        }
 
-                                                     //hover前元素設定
-                                                     &::before{
-                                                        position: absolute;
-                                                        content: '';
-                                                        top: 50%;
-                                                        left: 50%;
-                                                        z-index: 99;
-                                                        display: block;
-                                                        height: 0;
-                                                        background: rgba(255,255,255,.2);
-                                                        border-radius: 100%;
-                                                        transform: translate(-50%, -50%);
-                                                        opacity: 0;
-                                                    }
-
-                                                     //hover動畫
-                                                     @keyframes circle {
-                                                        0% {
-                                                        opacity: 1;
-                                                        }
-                                                        40% {
-                                                        opacity: 1;
-                                                        }
-                                                        100% {
-                                                        width: 170%;
-                                                        height: 170%;
-                                                        opacity: 0;
-                                                        }
-                                                    }
-                                    
                                                         &:hover{
                                                             -webkit-filter: grayscale(0) blur(0px);
                                                             filter: grayscale(0) blur(0px);
-                                                            &::before{
-                                                                animation: circle .90s;
-                                                            }
+                                                                &::before{
+                                                                    animation: circle 1.5s;
+                                                                }
                                                         }
-                                                    
+                                                    }
+
                                                 }
 
+                                            &:hover{
+                                                a.card_each{
+                                                    //圖片hover設定
+                                                    .img_grey{
+                                                        -webkit-filter: grayscale(0) blur(0px);
+                                                        filter: grayscale(0) blur(0px);
+                                                    
+                                                            &::before{
+                                                                animation: circle 1.5s;
+                                                            }
+                                                    }
+                                                }
                                             }
                                             
                                         }
@@ -303,15 +310,16 @@ body{
                                             background-color:#56793B ;
                                         }
 
-                     
+                                        //公告標題區
                                         a.news_hover{
                                             outline: none;
                                             text-decoration: none;
                                             display: flex;
                                             flex-direction: row;
                                             flex-wrap: wrap;
-             
-                                                 h4{
+                                            width:96%;
+
+                                                h4{
                                                     font-size: map-get($font_size, 'h4'); 
                                                     color:#818181;
                                                     font-weight: normal;
@@ -320,28 +328,85 @@ body{
                                                         
                                                 }
 
-                                                h3{
-                                                    // border: 1px solid yellow;
-                                                    font-size: map-get($font_size, 'h3'); 
-                                                    color:black;
-                                                    margin:0px;
-                                                    font-weight: normal;
-                                                    align-self: center;
-                                                    position: relative; //定位用
-                                                    overflow: hidden;
-                                                    background: linear-gradient(to right, #56793B, #56793B 50%, #000000 50%);
-                                                    background-clip: text;
-                                                    -webkit-background-clip: text;
-                                                    -webkit-text-fill-color: transparent;
-                                                    background-size: 200% 100%;
-                                                    background-position: 100%;
-                                                    transition: background-position 275ms ease;
+                                                .news_rotate{
+                                                    // border: 1px solid red; 
+                                                    position: relative;
+                                                    width:1000px;
+                                                    display:flex;
+                                                    flex-direction: column;
+                                                    flex-wrap: wrap;
+                                                    justify-content: center;
 
-                                                    &:hover {
-                                                        background-position: 0 100%;
-                                                    }
+                                                        h3{
+                                                            // border: 1px solid yellow;
+                                                            font-size: map-get($font_size, 'h3'); 
+                                                            color:black;
+                                                            margin:0px;
+                                                            font-weight: normal;
+                                                            -webkit-transition: all .3s;
+                                                            transition: all .3s;
+                                                            // align-self: center;
+                                                            // position: relative; //定位用
+                                                            // overflow: hidden;
+                                                            // background: linear-gradient(to right, #56793B, #56793B 50%, #000000 50%);
+                                                            // background-clip: text;
+                                                            // -webkit-background-clip: text;
+                                                            // -webkit-text-fill-color: transparent;
+                                                            // background-size: 200% 100%;
+                                                            // background-position: 100%;
+                                                            // transition: background-position 275ms ease;
+        
+                                                            // &:hover {
+                                                            //     background-position: 0 100%;
+                                                            // }
 
+                                                            &:nth-child(1){
+                                                                color:#56793B;
+                                                                margin:0px;
+                                                                -webkit-transform: rotateX(90deg);
+                                                                -moz-transform: rotateX(90deg);
+                                                                transform: rotateX(90deg);
+                                                                -webkit-transform-origin: 50% 50% -20px;
+                                                                -moz-transform-origin: 50% 50% -20px;
+                                                                transform-origin: 50% 50% -20px;
+                                                            }
+
+                                                            &:nth-child(2){
+                                                                position: absolute;
+                                                                left:0px;
+                                                                transform: translateY(-50%);
+                                                                -webkit-transform: rotateX(0deg);
+                                                                -moz-transform: rotateX(0deg);
+                                                                transform: rotateX(0deg);
+                                                                -webkit-transform-origin: 50% 50% -20px;
+                                                                -moz-transform-origin: 50% 50% -20px;
+                                                                transform-origin: 50% 50% -20px;
+                                                            }
+                                                        }
                                                 }
+
+                                            &:hover{
+                                                box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+                                                7px 7px 20px 0px rgba(0,0,0,.1),
+                                                4px 4px 5px 0px rgba(0,0,0,.1);
+                                                transition: all .4s;
+
+                                                    h3{
+                                                        &:nth-child(1){
+                                                            -webkit-transform: rotateX(0deg);
+                                                            -moz-transform: rotateX(0deg);
+                                                            transform: rotateX(0deg);
+                                                        }
+
+                                                        &:nth-child(2){
+                                                            color: transparent;
+                                                            -webkit-transform: rotateX(-90deg);
+                                                            -moz-transform: rotateX(-90deg);
+                                                            transform: rotateX(-90deg);
+                                                        }
+                                                        
+                                                    }
+                                            }
 
                                         }
                                         
@@ -371,7 +436,7 @@ body{
                                     display: flex;
                                     flex-direction:row;
                                     flex-wrap: wrap;
-                                    margin-bottom: 200px;
+                                    margin-bottom: 170px;
                                     box-shadow: -30px 30px #FDF0D2;
                                     // border: 1px solid blue;
 
@@ -458,7 +523,7 @@ body{
                                                         // border:1px solid black;
                                                         max-width: 89px;
                                                         padding:0px;
-                                                        margin: 0px 10px 10px 0px;
+                                                        margin: 0px 10px 5px 0px;
                                                         }
                                                 }
 
@@ -467,7 +532,7 @@ body{
 
                                         //右邊大圖
                                         .scenes_big_photos{
-                                            max-width:500px;
+                                            max-width:490px;
                                             // border: 1px solid black;
                                             align-self: center;
                                             font-size: 0px;
@@ -529,7 +594,7 @@ body{
 
                     //公告標題
                     .news_main{
-                        border:1px solid blue;
+                        // border:1px solid blue;
                         max-width: 1200px;
                         display: flex;
                         flex-direction: column;
@@ -537,8 +602,7 @@ body{
                         flex-wrap: wrap;
                         // align-content: center;
                         margin: 0 auto;
-                        margin-bottom: 200px;
-
+                        margin-bottom: 170px;
 
                             a.news_topic{
                                 display: flex;
@@ -549,34 +613,81 @@ body{
                                 background-color: #EDE3CC;
                                 padding:20px 0px 20px 20px;
                                 margin-bottom: 15px;
+                                box-shadow:0px 2px 8px  #C1BDBD;
+                                position:relative; //給hover線定位用
 
-                                    h4{
-                                        font-size: map-get($font_size, 'h4'); 
-                                        color:#818181;
-                                        font-weight: normal;
-                                        align-self: center;
-                                        margin: 0px 15px 0px 0px;
-                                    }
+                                //hover線
+                                &::before,&::after{
+                                    content:'';
+                                    position:absolute;
+                                    top:0;
+                                    right:0;
+                                    height:2px;
+                                    width:0;
+                                    background: #EDE3CC;
+                                    box-shadow:
+                                     -1px -1px 5px 0px #fff,
+                                     7px 7px 20px 0px #0003,
+                                     4px 4px 5px 0px #0002;
+                                    transition:400ms ease all;
+                                }
 
-                                    h3{
-                                        font-size: map-get($font_size, 'h3');
-                                        margin:0px; 
-                                        color:black;
-                                        font-weight: normal;
-                                        align-self: center;
-                                        position: relative; //定位用
-                                        overflow: hidden;
-                                        background: linear-gradient(to right, #56793B, #56793B 50%, #000000 50%);
-                                        background-clip: text;
-                                        -webkit-background-clip: text;
-                                        -webkit-text-fill-color: transparent;
-                                        background-size: 200% 100%;
-                                        background-position: 100%;
-                                        transition: background-position 275ms ease;
+                                &::after{
+                                    right:inherit;
+                                    top:inherit;
+                                    left:0;
+                                    background: #EDE3CC;
+                                    bottom:0;
+                                }
 
-                                        &:hover {
-                                            background-position: 0 100%;
+                                        h4{
+                                            font-size: map-get($font_size, 'h4'); 
+                                            color:#818181;
+                                            font-weight: normal;
+                                            align-self: center;
+                                            margin: 0px 15px 0px 0px;
                                         }
+
+                                        h3{
+                                            font-size: map-get($font_size, 'h3');
+                                            margin:0px; 
+                                            color:black;
+                                            font-weight: normal;
+                                            align-self: center;
+                                            position: relative; //定位用
+                                            overflow: hidden;
+                                            background: linear-gradient(to right, #56793B, #56793B 50%, #000000 50%);
+                                            background-clip: text;
+                                            -webkit-background-clip: text;
+                                            -webkit-text-fill-color: transparent;
+                                            background-size: 200% 100%;
+                                            background-position: 100%;
+                                            transition: background-position 275ms ease;
+
+                                            // &:hover {
+                                            //     background-position: 0 100%;
+                                            // }
+                                        }
+
+                                    &:hover{
+                                        //陰影
+                                        // box-shadow:0px 10px 10px  #CBC7C7;
+                                        // transform: translateY(-1.5%);
+                                        // transition: .3s ease-in-out;
+                                        // color: #f0094a;
+                                        background: transparent;
+                                        box-shadow:none;
+
+                                        &::before,&::after{
+                                            width:100%;
+                                            transition:800ms ease all;
+                                        }
+
+                                            //文字
+                                            h3.news_topic_title{
+                                                background-position: 0 100%;
+                                            }
+                                            
                                     }
                             }
                     }              
@@ -613,7 +724,7 @@ body{
                         // border: 1px solid black;
                         display: flex;
                         flex-direction: column;
-                        margin-right: 100px;  
+                        margin: 0px 100px 170px 0px;  
 
                             .address_circle{
                                 width:110px;

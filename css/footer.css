@@ -1,0 +1,45 @@
+body{
+    font-family:"微軟正黑體";
+    box-sizing: border-box;
+}
+
+.footer{
+    width: 100%;
+    position: relative;
+    bottom:0px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    flex-wrap: wrap;
+    align-content: center;
+    background-color: #6D806A;
+    padding:15px 0px;
+}
+
+.footer .share_icon{
+    /* border:1px solid black; */
+    display: inline-flex;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.footer .share_icon a{
+    /* border:1px solid blue; */
+    max-width: 25px;
+    outline: none;
+    text-decoration: none;
+    margin-right:5px;
+}
+
+.footer .share_icon a:hover{
+    opacity: .85;
+}
+
+.footer h6{
+    /* border: 1px solid pink; */
+    font-size: 10px;
+    font-weight: normal;
+    color:white;
+    margin:0px;
+}
+
