@@ -9,7 +9,6 @@ body img {
 }
 
 body .index_wrapper .visual_banner {
-  border: 1px solid red;
   background-image: url("../images/homepage/visual_banner.jpg");
   max-width: 1920px;
   height: 1060px;
@@ -20,7 +19,6 @@ body .index_wrapper .visual_banner {
 }
 
 body .index_wrapper .visual_banner .tea_title {
-  border: 1px solid blue;
   margin: 0 auto;
   width: 1200px;
   display: flex;
@@ -28,19 +26,16 @@ body .index_wrapper .visual_banner .tea_title {
 }
 
 body .index_wrapper .visual_banner .tea_title .title_font {
-  border: 1px solid black;
   display: flex;
   flex-direction: column;
   padding-top: 20%;
 }
 
 body .index_wrapper .visual_banner .tea_title .title_font .title_image {
-  border: 1px solid green;
   max-width: 563px;
 }
 
 body .index_wrapper .visual_banner .tea_title .title_font .title_button {
-  border: 1px solid yellow;
   display: flex;
   flex-direction: column;
   padding-left: 24%;
@@ -81,28 +76,26 @@ body .index_wrapper .visual_banner .tea_title .title_font .title_button a.btn_wi
 }
 
 body .index_wrapper .green_bk {
-  border: 1px solid brown;
   background-color: #C5C887;
   width: 100%;
   margin: 0 auto;
+  padding: 50px 0px;
 }
 
 body .index_wrapper .green_bk .white_bk {
-  border: 1px solid blue;
   background-color: white;
-  margin: 50px 150px;
+  margin: 0px 150px;
+  padding-bottom: 170px;
 }
 
 body .index_wrapper .green_bk .white_bk .hot_events {
   max-width: 367px;
   margin: 0 auto;
-  margin-top: 124px;
-  border: 1px solid red;
+  padding-top: 124px;
 }
 
 body .index_wrapper .green_bk .white_bk .package_big {
   max-width: 1400px;
-  border: 1px solid yellow;
   margin: 0 auto;
 }
 
@@ -356,7 +349,7 @@ body .index_wrapper .green_bk .white_bk .package_big .package_small_news a.news_
   font-size: 16px;
   color: #818181;
   font-weight: normal;
-  margin-right: 15px;
+  margin: 25px 15px;
 }
 
 body .index_wrapper .green_bk .white_bk .package_big .package_small_news a.news_hover .news_rotate {
@@ -423,7 +416,6 @@ body .index_wrapper .green_bk .white_bk .package_big .package_small_scenes {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-bottom: 170px;
   box-shadow: -30px 30px #FDF0D2;
 }
 
@@ -508,7 +500,6 @@ body .index_wrapper .green_bk .white_bk .package_big .package_small_scenes .scen
 
 body .index_wrapper .package_big {
   max-width: 1400px;
-  border: 1px solid yellow;
   margin: 0 auto;
 }
 
@@ -516,7 +507,6 @@ body .index_wrapper .package_big .news_title {
   max-width: 367px;
   margin: 0 auto;
   margin-top: 124px;
-  border: 1px solid red;
 }
 
 body .index_wrapper .package_big .news_title_word {
@@ -582,7 +572,7 @@ body .index_wrapper .package_big .news_main {
   flex-direction: column;
   flex-wrap: wrap;
   margin: 0 auto;
-  margin-bottom: 170px;
+  margin-bottom: 150px;
 }
 
 body .index_wrapper .package_big .news_main a.news_topic {
@@ -682,7 +672,7 @@ body .index_wrapper .package_small {
 body .index_wrapper .package_small .contact_address {
   display: flex;
   flex-direction: column;
-  margin: 0px 100px 170px 0px;
+  margin: 0px 100px 150px 0px;
 }
 
 body .index_wrapper .package_small .contact_address .address_circle {
@@ -782,5 +772,45 @@ body .index_wrapper .package_small .contact_address a.btn_small::before {
 body .index_wrapper .package_small .contact_address a.btn_small:hover::before {
   content: "";
   left: 100%;
+}
+
+body .index_wrapper .toTop-arrow {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  position: fixed;
+  right: 10%;
+  bottom: 20px;
+  border: none;
+  background-color: #D8D8D8;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+body .index_wrapper .toTop-arrow::after {
+  content: "";
+  position: absolute;
+  height: 0px;
+  top: 0;
+  left: 0;
+  display: block;
+  z-index: -1;
+  background-color: #E3C24A;
+  transition: all .3s ease-in-out;
+}
+
+body .index_wrapper .toTop-arrow h4 {
+  font-size: 16px;
+  font-weight: normal;
+  margin: 0px;
+  color: white;
+}
+
+body .index_wrapper .toTop-arrow:hover::after {
+  width: 60px;
+  height: 60px;
+  bottom: 0;
+  height: 100%;
+  transition: .3s ease-in-out all;
 }
 /*# sourceMappingURL=style.css.map */

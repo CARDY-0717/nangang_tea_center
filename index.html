@@ -14,6 +14,14 @@
     <!-- footer_css -->
     <link rel="stylesheet" href="./css/footer.css">
 
+    <!-- owl.carousel -->
+    <link rel="stylesheet" href="./js/owl.carousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="./js/owl.carousel/owl.theme.default.min.css">
+
+    <!-- slick報名區2輪播 -->
+    <!-- <link rel="stylesheet" type="text/css" href="./js/slick/slick.css"/> -->
+    <!-- <link rel="stylesheet" type="text/css" href="./js/slick/slick-theme.css"/> -->
+
 </head>
 
 <body>
@@ -21,7 +29,7 @@
     <div class="index_wrapper">
 
         <!-- header -->
-        <header class="header">
+        <header class="header headroom headroom headroom--unpinned headroom headroom--pinned">
 
                 <!-- logo圖 -->
                 <a href="./index.html" class="logo">
@@ -144,7 +152,6 @@
             <!-- 100%綠色底 -->
             <div class="green_bk">
 
-    
                     <!-- 白色底 -->
                     <div class="white_bk">
 
@@ -166,25 +173,24 @@
 
                             <!-- 活動報名卡牌 -->
                             <!-- 1200線 -->
-                            <div class="package_small">
+                            <div class="package_small owl-carousel">
 
                                 <!-- 活動卡牌1 -->
-                                <div class="events_card">
+                                <div class="events_card item">
                                     <a href="./index.html" class="card_each">
                                         <div class="img_circle"><img src="./images/events_part_one/event_a.jpg" alt="event"></div>
-                                        <h4>2021-12-30</h4>
+                                        <h4>2021-07-30</h4>
                                         <h3 class="events_title">茶山一日遊</h3>
                                     </a>
 
                                     <a href="./index.html" class="btn_small">我有興趣→</a>   
-                                    
                                 </div>
 
                                 <!-- 活動卡牌2 -->
-                                <div class="events_card">
+                                <div class="events_card item">
                                     <a href="" class="card_each">
                                         <div class="img_circle"><img src="./images/events_part_one/event_b.jpg" alt="event"></div>
-                                        <h4>2021-11-04</h4>
+                                        <h4>2021-10-04</h4>
                                         <h3 class="events_title">半日茶山小旅行</h3>
                                     </a>
 
@@ -193,10 +199,10 @@
                                 </div>
 
                                 <!-- 活動卡牌3 -->
-                                <div class="events_card">
+                                <div class="events_card item">
                                     <a href="" class="card_each">
                                         <div class="img_circle"><img src="./images/events_part_one/event_c.jpg" alt="event"></div>
-                                        <h4>2021-09-16</h4>
+                                        <h4>2021-11-10</h4>
                                         <h3 class="events_title">茶山體驗行程1+1</h3>
                                     </a>
 
@@ -205,10 +211,10 @@
                                 </div>
 
                                 <!-- 活動卡牌4 -->
-                                <div class="events_card">
+                                <div class="events_card item">
                                     <a href="" class="card_each">
                                         <div class="img_circle"><img src="./images/events_part_one/event_d.jpg" alt="event"></div>
-                                        <h4>2021-06-20</h4>
+                                        <h4>2021-12-08</h4>
                                         <h3 class="events_title">種子鑰匙圈DIY</h3>
                                     </a>
 
@@ -234,7 +240,7 @@
                                 <div class="events_card events_upcome">
                                     <a href="" class="card_each">
                                         <div class="img_grey"><img src="./images/events_part_one/event_aa.jpg" alt="event"></div>
-                                        <h4>2021-04-22</h4>
+                                        <h4>2021-11-22</h4>
                                         <h3 class="events_title">口紅DIY</h3>
                                     </a>
 
@@ -246,7 +252,7 @@
                                 <div class="events_card events_upcome">
                                     <a href="" class="card_each">
                                         <div class="img_grey"><img src="./images/events_part_one/event_bb.jpg" alt="event"></div>
-                                        <h4>2021-02-15</h4>
+                                        <h4>2021-12-30</h4>
                                         <h3 class="events_title">茶山寫生活動</h3>
                                     </a>
 
@@ -258,7 +264,7 @@
                                 <div class="events_card events_upcome">
                                     <a href="" class="card_each">
                                         <div class="img_grey"><img src="./images/events_part_one/event_cc.jpg" alt="event"></div>
-                                        <h4>2021-03-27</h4>
+                                        <h4>2022-03-27</h4>
                                         <h3 class="events_title">茶食DIY</h3>
                                     </a>
 
@@ -575,8 +581,30 @@
 
         </footer>
 
+        <!-- top按鈕 -->
+        <button type="button" id="BackTop" class="toTop-arrow">
+            <h4>↑</h4>
+            <h4>Top</h4>
+        </button>
+
     <!-- 每個頁面用div包結束 -->
     </div>
-    
+
+    <!--   jQuery導入 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- headroom程式導入   -->
+    <script src="https://unpkg.com/headroom.js@0.9.4/dist/headroom.js"></script>
+
+    <!-- owl.carousel -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.2.4/owl.carousel.min.js"></script> -->
+    <script src="./js/owl.carousel/owl.carousel.min.js"></script>
+
+    <!-- slick報名區2輪播 -->
+    <!-- <script src="./js/slick/slick.min.js"></script> -->
+
+    <!-- 首頁用到的js -->
+    <script src="./js/index.js"></script>
+
 </body>
 </html>

@@ -16,13 +16,46 @@ body{
     /* border: 1px solid red; */
 }
 
+/* headroom動畫跟設定 */
+@keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+
+  50%{
+    opacity:0,6;
+  }
+
+  100% {
+    opacity:1;
+  }
+}
+
+.headroom {
+    animation: fadeIn linear .4s;
+    /* animation: fadeOut ease .8s; */
+  
+}
+
+.headroom--pinned {
+    display: block;
+    transform: translateY(0%);
+}
+
+.headroom--unpinned {
+    display: none;
+    transform: translateY(-100%);
+}
+
+/* headroom動畫跟設定結束 */
+
 .header .logo {
     /* display: inline-block; */
     /* display: flex;
     align-self:flex-end; */
     position: absolute;
-    top:10px;
-    right: 60px;
+    top:20px;
+    right: 75px;
     max-width: 45px;
     /* border: 1px solid black; */
   
@@ -39,6 +72,7 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    /* margin-right: 25px; */
     /* border:1px solid blue; */
    }
  
@@ -135,7 +169,7 @@ body{
      display: inline-block;
      /* float: right; */
      position: fixed;
-     right: 10px;
+     right: 35px;
      top:10px;
      transition: all .5s ease-out;
      /* user-select: none; */
@@ -147,8 +181,8 @@ body{
      display: block;
      height: 3px;
      position: fixed;
-     right: 10px;
-     top:10px;
+     right: 35px;
+     top:20px;
      width: 28px;
      transition: all .5s ease-out;
    }
