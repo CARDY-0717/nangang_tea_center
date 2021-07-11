@@ -196,7 +196,7 @@ body{
                                                             transition: background-position 275ms ease;
 
                                                         }
-                                               
+                                                
                                                 }
                                                     
                                                 //小按鈕mixin
@@ -266,13 +266,13 @@ body{
                                                             opacity: 0;
                                                         }
 
-                                                        &:hover{
-                                                            -webkit-filter: grayscale(0) blur(0px);
-                                                            filter: grayscale(0) blur(0px);
-                                                                &::before{
-                                                                    animation: circle 1.5s;
-                                                                }
-                                                        }
+                                                        // &:hover{
+                                                        //     -webkit-filter: grayscale(0) blur(0px);
+                                                        //     filter: grayscale(0) blur(0px);
+                                                        //         &::before{
+                                                        //             animation: circle 1.5s;
+                                                        //         }
+                                                        // }
                                                     }
 
                                                 }
@@ -294,7 +294,6 @@ body{
                                         }
 
                                 }//package_small結尾
-
 
                                 //活動區-第三區活動公告
                                 .package_small_news{

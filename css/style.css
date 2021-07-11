@@ -307,14 +307,6 @@ body .index_wrapper .green_bk .white_bk .package_big .package_small .events_upco
   opacity: 0;
 }
 
-body .index_wrapper .green_bk .white_bk .package_big .package_small .events_upcome a.card_each .img_grey:hover {
-  filter: grayscale(0) blur(0px);
-}
-
-body .index_wrapper .green_bk .white_bk .package_big .package_small .events_upcome a.card_each .img_grey:hover::before {
-  animation: circle 1.5s;
-}
-
 body .index_wrapper .green_bk .white_bk .package_big .package_small .events_upcome:hover a.card_each .img_grey {
   filter: grayscale(0) blur(0px);
 }

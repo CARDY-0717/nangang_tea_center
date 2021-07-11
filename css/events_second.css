@@ -1,0 +1,86 @@
+body{
+    font-family:"微軟正黑體";
+    box-sizing: border-box;
+}
+
+/* Control styles */
+/* .carousel {
+    position: relative;
+    overflow:hidden;
+    transform: translateZ(0px);
+  } */
+  
+  .carousel	input {
+    position: absolute;
+    left: 0;
+    z-index: 3;
+    margin: 0;
+  }
+  
+  .carousel input:before {
+    position: absolute;
+    content: "<";
+  }
+  input:checked ~ input:before {
+    content: ">";
+  }
+  
+  input:checked {
+    display: none;
+  }
+  input:checked ~ input {
+    right: 0;
+    left: auto;		
+  }
+  input:checked + div + input {
+    z-index: 4;
+  }
+  input + div {
+    position: absolute;
+    z-index: 1;
+  }  
+  input:checked + div {
+    z-index: 2;
+  }  
+  
+  /* demo style */
+  .carousel {
+    width: 350px;
+    height: 450px;
+  /*   margin: 2em auto; */
+    overflow:hidden;
+    transform: translateZ(0px); /* stops flickering incode pen*/
+    /* box-shadow: 0 0 2px 1px #ccc; */
+  }
+  
+  .carousel	input {
+    cursor: pointer;
+    top: 150px;
+    width: 60px;
+    height: 60px;
+    left: 5px;
+  }
+  input:checked ~ input {
+    right: 30px;	
+  }
+  .carousel input:before {
+    background: #E3C24A;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 25px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border: 5px solid #E3C24A;
+  }
+  
+  /* Disolve*/
+  #test2 input + div {
+    transition: opacity 0s 1s;
+    opacity: 0;
+  }
+  #test2 input:checked + div {
+    transition: opacity 1s;
+    opacity: 1;
+  }
