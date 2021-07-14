@@ -240,6 +240,7 @@ body{
                                         //活動區-第二區活動預告
                                         .events_upcome{
                                             background-color:white ;
+                                            // position: relative;
 
                                                 a.card_each{
                                                     //調整圖片hover效果
@@ -448,6 +449,7 @@ body{
                                             display: flex;
                                             flex-direction: column;
                                             margin-right: 40px;
+                                            // cursor: pointer;
                                             
 
                                                 h3{
@@ -513,19 +515,26 @@ body{
                                                 }
 
                                                 .scenes_small_photos{
+                                                    z-index: 99;
+                                                    cursor: pointer;
                                                     display:flex;
                                                     flex-direction:row;
-                                                    // border:1px solid brown;
                                                     flex-wrap: wrap;
                                                     // align-content: center;
+                                                    // border:1px solid brown;
                                                     justify-content: space-around;
                                                     margin-top: 20px;
 
-                                                        .small_size{
+                                                        a.small_size{
                                                         // border:1px solid black;
                                                         max-width: 89px;
                                                         padding:0px;
                                                         margin: 0px 10px 5px 0px;
+
+                                                        &:hover{
+                                                            opacity: .7;
+                                                        }
+
                                                         }
                                                 }
 
@@ -538,6 +547,17 @@ body{
                                             // border: 1px solid black;
                                             align-self: center;
                                             font-size: 0px;
+                                            position: relative;
+
+                                                div{
+                                                    position: absolute;
+                                                    top:0px;
+                                                    display:none;
+                                                     
+                                                        &:target{
+                                                            display:flex;
+                                                        }
+                                                }
                                         }
                                 }//package_small_scenes結尾
                        } //package_big結尾

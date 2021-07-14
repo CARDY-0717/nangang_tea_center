@@ -55,24 +55,52 @@ body{
   
   .carousel	input {
     cursor: pointer;
-    top: 150px;
-    width: 60px;
-    height: 60px;
+    top: 170px;
+    width: 45px;
+    height: 45px;
+    /* border-radius: 50%; */
     left: 5px;
+    overflow: hidden; 
+    /*隱藏hover白光*/
   }
+
   input:checked ~ input {
     right: 30px;	
   }
+
+  /* hover白光 */
+  .carousel input:after{
+    content: "";
+    position: absolute;
+    top:0;
+    left:-100%;
+    width:100%;
+    height:100%;
+    border-radius: 50%;
+    opacity: .5;
+    background:linear-gradient(90deg,transparent,#fff,transparent);
+    transition: 0.5s;
+    /* overflow: hidden;  */
+
+  }
+
+  .carousel input:hover:after{
+    /* content: ""; */
+    left:100%;
+  }
+
   .carousel input:before {
     background: #E3C24A;
-    border-radius: 50%;
+    border-radius: 10px;
+    /* overflow: hidden; */
     color: #fff;
     font-size: 25px;
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
     text-align: center;
-    border: 5px solid #E3C24A;
+    /* border: 5px solid #E3C24A; */
+    
   }
   
   /* Disolve*/
