@@ -720,7 +720,6 @@ body .index_wrapper .package_small .contact_address h3.adress_getting_here {
   background-size: 200% 100%;
   background-position: 100%;
   transition: background-position 275ms ease;
-  text-decoration-line: underline;
 }
 
 body .index_wrapper .package_small .contact_address h3.adress_getting_here:hover {
