@@ -674,7 +674,7 @@ body .index_wrapper .package_small {
   max-width: 1200px;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
   margin-bottom: 150px;
 }
@@ -682,6 +682,7 @@ body .index_wrapper .package_small {
 body .index_wrapper .package_small .contact_address {
   display: flex;
   flex-direction: column;
+  padding: 0px 80px;
 }
 
 body .index_wrapper .package_small .contact_address .address_circle {
