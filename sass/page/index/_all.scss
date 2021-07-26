@@ -740,13 +740,16 @@ body{
                 flex-direction: row;
                 justify-content:space-around;
                 flex-wrap: wrap;
+                margin-bottom: 150px;
 
                     //地址區1
                     .contact_address{
                         // border: 1px solid black;
                         display: flex;
                         flex-direction: column;
-                        margin: 0px 100px 150px 0px;  
+                        // justify-content: center;
+                        // align-items: center; 
+                        // margin: 0px 100px 150px 0px;  
 
                             .address_circle{
                                 width:110px;
@@ -758,7 +761,8 @@ body{
                                 background-image: url("../images/contact_us/location_icon.png");
                                 background-repeat: no-repeat;
                                 background-position: center center;
-                                margin-left:35px;
+                                // margin-left:35px; 
+                                align-self: center;
                                 // border: 1px solid green;
                             }
 
@@ -769,6 +773,8 @@ body{
                                 // border: 1px solid blue;
                                 display: flex;
                                 flex-direction: row;
+                                // align-self: center;
+                                margin:20px 0px 0px 0px;
 
                                     span.contact_icon{
                                         // border: 1px solid green;
@@ -805,7 +811,7 @@ body{
                             //留言區3
                             .message_circle{
                                 background-image: url("../images/contact_us/message_icon.png");
-                                margin-left:45px;
+                                // margin-left:45px;
                             }
 
                             h5{

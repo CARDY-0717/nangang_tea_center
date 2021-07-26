@@ -676,12 +676,12 @@ body .index_wrapper .package_small {
   flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
+  margin-bottom: 150px;
 }
 
 body .index_wrapper .package_small .contact_address {
   display: flex;
   flex-direction: column;
-  margin: 0px 100px 150px 0px;
 }
 
 body .index_wrapper .package_small .contact_address .address_circle {
@@ -693,7 +693,7 @@ body .index_wrapper .package_small .contact_address .address_circle {
   background-image: url("../images/contact_us/location_icon.png");
   background-repeat: no-repeat;
   background-position: center center;
-  margin-left: 35px;
+  align-self: center;
 }
 
 body .index_wrapper .package_small .contact_address h3 {
@@ -702,6 +702,7 @@ body .index_wrapper .package_small .contact_address h3 {
   font-weight: normal;
   display: flex;
   flex-direction: row;
+  margin: 20px 0px 0px 0px;
 }
 
 body .index_wrapper .package_small .contact_address h3 span.contact_icon {
@@ -732,7 +733,6 @@ body .index_wrapper .package_small .contact_address .web_circle {
 
 body .index_wrapper .package_small .contact_address .message_circle {
   background-image: url("../images/contact_us/message_icon.png");
-  margin-left: 45px;
 }
 
 body .index_wrapper .package_small .contact_address h5 {
