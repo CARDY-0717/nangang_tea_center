@@ -5,6 +5,7 @@ body{
     img{
         width:100%;
     }
+}//body結束
 
 
     // 所有包起來div
@@ -887,7 +888,94 @@ body{
 
     }// 所有包起來index_div結束
 
-}//body結束
-
 
 //---------------RWD---------------
+
+//1800
+@include rwd(1800px) {
+    .index_wrapper{
+        //第二區白色區域變小
+        .green_bk{
+            .white_bk{
+                margin: 0px 80px;
+            }
+        }
+
+    }
+}
+
+//1700
+@include rwd(1700px) {
+    .index_wrapper{
+        //第二區白色區域繼續變小
+        //變成上下左右一樣
+        .green_bk{
+            .white_bk{
+                margin: 0px 50px;
+            }
+        }
+
+    }
+}
+
+//1600
+@include rwd(1600px) {
+    .index_wrapper{
+        //第二區活動區標題灰色線跟綠色線變短
+        .green_bk{
+            .white_bk{
+                .package_big{ //1400線
+                    // border: 1px solid black;
+                    .register_title{
+                        //綠色大標往左
+                        h2{
+                            margin-left:20px;
+                        }
+                        //標題灰色線
+                        .title_line{
+                            width:40%;
+                        }
+
+                        // 活動區4花絮灰色線要對齊上方
+                        .scenes_title_line{
+                            width:34%; 
+                        }   
+                    }
+
+                    //活動區2卡牌往左移對齊綠色大標
+                    .package_small{  //1200線
+                        margin-left:20px;
+                    }
+
+                    //活動公告綠色跟灰色線對齊
+                    .package_small_news{
+                        margin-left: 20px;
+                        //綠色線
+                        .news_line_a{
+                            width:88%;
+                        }
+                        //灰色線
+                        .inner_line{
+                            width:88%;
+                        }
+                    }
+                }
+            }
+        }
+
+
+        //第三區所有公告區標題內縮對齊第二區活動區
+        .package_big{
+            .news_title_word{
+                //標題內縮
+                h2{
+                    margin-left: 20px;
+                }
+                //標題灰色線
+                .title_line{
+                    width: 50%;
+                }
+            }
+        }
+    }//整個div結束
+}//rwd結束
