@@ -13,8 +13,8 @@ body .index_wrapper .visual_banner {
   max-width: 1920px;
   height: 1060px;
   background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: center top;
+  background-size: cover;
+  background-position: center center;
   display: flex;
 }
 

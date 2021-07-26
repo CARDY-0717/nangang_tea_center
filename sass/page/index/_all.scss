@@ -18,8 +18,9 @@ body{
                 max-width: 1920px;
                 height: 1060px;
                 background-repeat: no-repeat;
-                background-size: 100%;
-                background-position: center top;
+                background-size: cover;
+                // background-size: 100%;
+                background-position: center center;
                 display: flex;
 
                     .tea_title{
@@ -886,5 +887,7 @@ body{
 
     }// 所有包起來index_div結束
 
-
 }//body結束
+
+
+//---------------RWD---------------
