@@ -5,3 +5,229 @@
 // @include rwd(large) {
 //     }
 // }
+
+//1355
+@include rwd(1355px) {
+    .index_wrapper{
+        //第二區白色區域跟綠色區變小
+        //變成上下左右一樣
+        //綠色區
+        .green_bk{
+            padding: 30px 0px;
+            //白色區
+            .white_bk{
+                margin: 0px 30px;
+            }
+        }
+
+    }
+}
+
+//1300
+@include rwd(1300px){
+    .index_wrapper{
+        //第二區活動區
+        .green_bk{
+            .white_bk{
+                .package_big{ //1400線
+                    //活動區第4活動花絮區塊陰影none掉
+                    .package_small_scenes{ //1200線
+                        box-shadow: none;
+                    }
+                }
+            }
+        }
+
+        //第三區各種公告咖啡色區域內縮
+        .package_big{
+            .news_main{
+                max-width: 1150px;
+            }
+        }
+    }
+}
+
+//1280
+@include rwd(1280px) {
+    .index_wrapper{
+        //第二區活動區
+        .green_bk{
+            .white_bk{
+                .package_big{
+                    .package_small_news{
+                        //活動公告旋轉陰影對齊綠線
+                        a.news_hover{
+                            width: 88%;
+                            //標題的日期掉下來後微調對齊
+                            h4{
+                                margin:15px 0px 5px 15px;
+                            }
+                            //標題內文
+                            .news_rotate{
+                                margin:0px 0px 15px 15px;
+                            }
+                        }
+                    }
+
+                    //活動花絮四周padding縮小
+                    .package_small_scenes{
+                        max-width: 1010px;
+                        padding: 20px;
+                        .scenes_left{
+                            margin-right: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//1260
+@include rwd(1260px) {
+    .index_wrapper{
+        //第三區各式公告
+        .package_big{
+            .news_title_word{
+                //灰色線變短讓按鈕對齊咖啡色區
+                .title_line{
+                    width: 43%;
+                }
+            }
+            //咖啡色區域改小
+            .news_main{
+                max-width: 1050px;
+            }
+        }
+    }
+}
+
+//1130
+@include rwd(1130px) {
+    .index_wrapper{
+        //第一區banner大標稍微往左移不要靠邊
+        .visual_banner{
+            .tea_title{
+                .title_font{
+                    transform: translateX(-30px);
+                }
+            }
+        }
+        .green_bk{
+            .white_bk{
+                .package_big{
+                    .register_title{
+                        .title_line{
+                            width: 30%;
+                        }
+                    }
+                    //活動區3公告區域綠線跟灰線縮短
+                    .package_small_news{
+                        //綠線
+                        .news_line_a{
+                            width: 83%;
+                        }
+                        //翻轉框
+                        a.news_hover{
+                            width: 83%;
+                        }
+                        //灰線
+                        .inner_line{
+                            width: 83%;
+                        }
+                    }
+
+                    //活動區4活動花絮
+                    .package_small_scenes{
+                        max-width: 1000px;
+                        padding: 15px;
+                        .scenes_left{
+                            margin-right: 10px;
+                        }
+                    }
+                }
+            }
+        }
+
+        //各式公告區
+        .package_big{
+            .news_title_word{
+                //灰色線縮短對齊活動區
+                .title_line{
+                    width: 37%;
+                }
+            }
+            //咖啡色區對齊
+            .news_main{
+                max-width: 890px;
+            }
+        }
+    }
+}
+
+//1080-開始調整按鈕
+@include rwd(1080px) {
+    .index_wrapper{
+        //第二區活動區
+        .green_bk{
+            .white_bk{
+                .package_big{
+                    //標題中按鈕改長度
+                    .register_title{
+                        //中按鈕mixine改長度
+                        @include btnall('a.btn_middle', 13% , 20px, 8px , #E3C24A, 0px );
+                    }
+
+                    .package_small{
+                        .events_card{
+                            //活動區2活動卡牌縮小，周圍跟著縮小所以調下padding
+                            padding: 15px;
+                            //小按鈕mixin
+                            @include btnall('a.btn_small', 42% , 12px, 7px , #E3C24A , 0px );
+                        }
+                    }
+
+                    //活動區4活動花絮變直的
+                    .package_small_scenes{
+                        padding: 20px;
+                        max-width: 550px;
+                        justify-content: center;
+                        box-shadow: -25px 25px #fdf0d2;
+
+                        .scenes_left{
+                            margin-right: 0px;
+                        }
+
+                        //大圖片掉下去後對齊
+                        .scenes_big_photos{
+                            // max-width: 487px;
+                            left: -1%;
+                            margin-top: 8px;
+                        }
+                    }
+                }
+            }
+        }
+
+
+        //第三區各種公告區
+        .package_big{
+            .news_title_word{
+                //標題中按鈕mixine改長度
+                @include btnall('a.btn_middle', 13% , 20px, 8px , #E3C24A, 0px );
+            }
+            //咖啡色區對齊
+            .news_main{
+                max-width: 940px;
+            }
+        }
+
+        //第四區用心察茶覺小按鈕修改
+        .package_small{
+            .contact_address{
+                 //小按鈕mixin
+                 @include btnall('a.btn_small', 42% , 12px, 7px , #E3C24A , 0px );
+            }
+        }
+    }
+}
